@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.bumptech.glide.Glide;
 import com.example.recycleview.databinding.ActivityMainBinding;
 import com.example.recycleview.databinding.ActivityRecycleViewBinding;
 
@@ -29,6 +30,7 @@ public class RecycleViewActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Glide.with(RecycleViewActivity.this).load("https://www.google.com/url?sa=i&url=https%3A%2F%2Fsoundcloud.com%2Flandomc%2Flebron-james-you-are-my-sunshine-jamaican-version&psig=AOvVaw0_5AG37mhNDVEFGkvQQNFR&ust=1738320705493000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNj2wrOjnYsDFQAAAAAdAAAAABAE").into(binding.roundediv);
         FoodCategory foodCategory1 = new FoodCategory("Burgers", R.drawable.ic_burgers);
         FoodCategory foodCategory2 = new FoodCategory("Pizza", R.drawable.ic_pizza);
         FoodCategory foodCategory3 = new FoodCategory("Burgers", R.drawable.ic_chicken);
